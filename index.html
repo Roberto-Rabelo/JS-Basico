@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variaveis JS</title>
+</head>
+
+<body>
+    
+    <script>
+
+        // VAriaveis - string, inteiro, float e boolean
+        var nome = 'roberto';
+        var idade = 21;
+        var peso = 72.1;
+        var humano = true;
+
+        //vetor são com [] e indice sempre do 0
+        var curso = ['hmtl', 'css', 'JS', 'bootstrap', 'react'];
+
+        //objeto sempre com {} e acessado com matriz mais ponto atributo ex: aluno.nome result = Gabriel    
+        var aluno = {
+            nome: 'Gabriel',
+            idade: 21,
+            peso: 70,
+            humano: false
+        };
+
+        //operações matematica
+        var x = 10, y = 5;
+
+        x = + 3 //acumulação 
+
+        //Função ou fuction 
+        function soma(num1, num2) {
+            var resultado = num1 + num2;
+
+            return resultado
+        }
+        var resultado = soma(10, 10)
+
+        // condicionais 
+        function resultSexo(sexo) {
+            //M ou F
+            // == verifica o conteudo da variavel 
+            // === verifica o conteudo e a tipagem da variavel
+            if (sexo == "M") {
+                return 'masculino'
+            } else if (sexo == "F") {
+                return 'feminino'
+            } else {
+                return 'outros'
+            }
+        }
+
+        var resultadosexo = resultSexo('aajdjas')
+
+        //Operadores Logicos AND(&&), OR(||) e NOT(!=)
+        var sexo = "M", idade = '21';
+        console.log(sexo)
+        if (sexo === "M" || idade < 18) {
+            console.log('ok!')
+        } else {
+            console.log('FALSE')
+        }
+        //condições termaria usada apenas para duas possibilidades
+        var cor = 'vermelh';
+        var retorno = (cor === 'vermelho') ? 'verdadeiro' : 'falso';
+
+        //estrutura de repetição
+        //For (condição inicial, condição, acumulador )
+        for (var i = 0; i <= 100; i++) {
+            console.log(i)
+        };
+
+        var j = 123456;
+        while (j > 50) {
+            console.log(j)
+
+            j /= 5;
+        };
+
+        //intervalo e timeout executar uma função em determinado tempo
+        function exibirAlgo(){
+        console.log("Hello world!")
+    
+        }
+        setInterval(exibirAlgo,1000); //função será executada cada 1 seg
+        setTimeout(exibir, 5000); //função será executada atrasada 5 seg
+        console.log(retorno);
+    </script>
+</body>
+
+</html>
