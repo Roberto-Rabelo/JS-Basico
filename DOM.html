@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Manipulando DOM</title>
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="mostrarAlert()">teste função click</button>
+        <button onmouseover="mostrarAlert2()"> testando função over</button>
+        <input onkeypress="mostrarAlertKey()" type="text" placeholder="testando  onkeypress"> </input>
+    </div>
+    <hr>
+    <div class="container2">
+        <input type="text" id="nome" name="nome">
+        <button class="btn"> adicionar </button>
+    </div>
+    <div id="app">
+        
+    </div>
+    <script>
+         //DOM arvores de elementos
+         function mostrarAlert(){
+             alert("botão foi clicado") //alert pula um janela com um informação
+         }
+         function mostrarAlert2(){
+             alert("botão foi passado o mouse ") //alert pula um janela com um informação
+         }
+         function mostrarAlertKey(){
+             alert("foi pressionado na tela") //alert pula um janela com um informação
+         }
+         //Buscando elementos do HTML para JS
+         var inputElemento = document.querySelector('div.container2 input');
+         var btn = document.querySelector('button.btn');
+
+          btn.onclick = function(){
+             var text = inputElemento.value;
+             alert(text);
+         }
+         var linkElement = document.createElement("a")
+         linkElement.setAttribute("href", 'www.twitter.com')
+
+         var textElement = document.createTextNode("acesse seu facebook")
+         linkElement.appendChild(textElement)
+    
+         var containetElement = document.querySelector('#app')
+         containetElement.appendChild(linkElement)
+    </script>
+</body>
+
+</html>
